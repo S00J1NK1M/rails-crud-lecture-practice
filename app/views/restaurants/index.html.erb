@@ -2,7 +2,7 @@
 
 <ol>
 <% @restaurants.each do |restaurant| %>
-  <li><%= restaurant.name %> | <%= restaurant.address %> | Rating: <%= restaurant.rating %></li>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant) %> | <%= restaurant.address %> | Rating: <%= restaurant.rating %></li>
 <% end %>
 </ol>
 

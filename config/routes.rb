@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   get '/restaurants/:id', to: 'restaurants#show', as: :restaurant
 
   # Update
-  get '/restaurants/:id/edit', to: 'restaurants#edit'
+  get '/restaurants/:id/edit', to: 'restaurants#edit', as: :restaurant_edit
   patch '/restaurants/:id', to: 'restaurants#update'
 
   # Destroy (delete)
   delete '/restaurants/:id', to: 'restaurants#destroy'
+
+  # resources :restaurants # generate the 7 routes shown before with just one line
 end
